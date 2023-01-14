@@ -24,15 +24,15 @@ window.addEventListener("load", fetchCountries());
 
 
 // 4 - Créer une fonction d'affichage, et paramétrer l'affichage des cartes de chaque pays grace à la méthode MAP
+// fonction toLocaleString(), qui permet d'avoir un espace entre les milliers.
 function countriesDisplay() {
     countriesContainer.innerHTML = countriesData.map((country) => 
     `
         <div class="card">
-            <img src=${country.flags.svg} alt="drapeau ${country.translations.fra.common}"
+            <img src=${country.flags.svg} alt="drapeau ${country.translations.fra.common}">
             <h2>${country.translations.fra.common}</h2>
             <h4>${country.capital}</h4>
 
-// fonction toLocaleString(), qui permet d'avoir un espace entre les milliers.
             <p>Population : ${country.population.toLocaleString()}</p>
         </div>
     
